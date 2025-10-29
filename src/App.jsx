@@ -14,6 +14,17 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Evento de Meta Pixel
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "InitiateCheckout", {
+        content_name: "Kit Profesional TOTAL 20V",
+        value: 475875,
+        currency: "COP",
+      });
+    }
+
+    // Redirección a WhatsApp
     const mensaje = `Hola, quiero agendar mi compra del Kit TOTAL 20V.\n\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nDirección: ${formData.direccion}`;
     const url = `https://wa.me/573168014144?text=${encodeURIComponent(
       mensaje
@@ -23,7 +34,7 @@ function App() {
 
   return (
     <div className="landing">
-      {/* Header */}
+      {/* Navbar */}
       <nav className="navbar">
         <img
           src="https://scontent.fclo2-2.fna.fbcdn.net/v/t1.6435-9/177345488_100563652187179_7108501711940390842_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ghhjCDy3_JYQ7kNvwFn5oI-&_nc_oc=AdkZpss0vROwPI3o0WA4ZyNo6_iEEt5I5TWkjS2dP5cnvtm3CXgVYQFWr31o6OhG53k&_nc_zt=23&_nc_ht=scontent.fclo2-2.fna&_nc_gid=TXAuchemp6D-w5SqWO2XUA&oh=00_AffBBHaeXYS_usOhBTzOlDUxMs-7XTC_dOhVYoIz4oZ3iA&oe=6929CF16"
@@ -109,7 +120,7 @@ function App() {
             onChange={handleChange}
           />
           <button type="submit" className="cta-btn">
-            Pide ahora por WhatsApp 📦{" "}
+            Agenda tu pedido por WhatsApp 📦
           </button>
         </form>
       </section>
