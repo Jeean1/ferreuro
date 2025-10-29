@@ -62,13 +62,16 @@ function App() {
           alt="Taladro Inalámbrico TOTAL 20V"
           className="hero-img"
         />
-        <h1>Kit Profesional TOTAL 20V – Taladro Inalámbrico + 165 Piezas</h1>
+        <h1>Tu taller en casa y potencia profesional en un solo kit</h1>
         <p className="subtitle">
-          Potencia, precisión y durabilidad en un solo kit. Diseñado para
-          profesionales que exigen resultados.
+          Con el Kit TOTAL 20V + 165 piezas, trabaja desde tu hogar con
+          herramientas de nivel profesional. Perfora acero, concreto y madera
+          con potencia de 66 Nm. Ideal para bricolaje exigente o proyectos
+          profesionales. Batería de larga duración, control de velocidad
+          variable, luz LED integrada y todos los accesorios que necesitas.
         </p>
-        <button className="cta-btn" onClick={() => window.scrollTo(0, 800)}>
-          Agendar ahora
+        <button className="cta-btn" onClick={() => window.scrollTo(0, 1800)}>
+          OBTENGALO AQUÍ📦
         </button>
       </header>
 
